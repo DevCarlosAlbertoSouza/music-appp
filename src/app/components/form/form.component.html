@@ -1,0 +1,36 @@
+<!-- src/app/form/form.component.html -->
+<h2>Musica Formulario</h2>
+<div>
+  <form #musicForm="ngForm" (ngSubmit)="saveSong(musicForm)">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="song.title" name="title" required />
+    </div>
+    <div>
+      <label for="artist">Artist:</label>
+      <input type="text" id="artist" [(ngModel)]="song.artist" name="artist" required />
+    </div>
+    <button type="submit">Save</button>
+  </form>
+
+  <h3>Lista de Musicas</h3>
+  <table>
+    <thead>
+      <tr>
+        <th class="title">Title</th>
+        <th  class="artist">Artist</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of songList | async">
+        <td >{{ song.title }}</td>
+        <td>{{ song.artist }}</td>
+        <td>
+          <button class="edit" (click)="editSong(song)">Edit</button>
+          <button class="delete" (click)="deleteSong(song.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

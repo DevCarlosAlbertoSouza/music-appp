@@ -1,0 +1,19 @@
+<div class="conteiner">
+  <h1>{{ title }}</h1>
+
+  <h2>Song List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of songList | async">
+        <td>{{ song.title }}</td>
+        <td>{{ song.artist }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

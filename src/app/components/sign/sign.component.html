@@ -1,0 +1,21 @@
+<section class="section-registro">
+  <div class="register-container">
+      <h2>Criar uma nova conta</h2>
+      @if (errorMessage) {
+      <div >{{errorMessage}}</div>}
+      <form [formGroup]="form" (submit)="onSubmit()">
+          <div class="form-group">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" username="name" formControlName="username" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Email" name="email" formControlName="email">
+          </div>
+          <div class="form-group">
+              <label for="password">Senha</label>
+              <input type="password" placeholder="Senha" formControlName="password" id="password" name="password">
+          </div>
+          <button class="bttn-submit" type="submit">Registrar</button>
+      </form>
+  </div>

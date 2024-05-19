@@ -1,0 +1,50 @@
+
+
+/* Estilize o contêiner */
+.dropdown-container {
+  position: relative;
+  width: 1%;
+  margin:  auto 10px;
+}
+
+/* Estilize o botão */
+.dropdown-button {
+  background-color: #fbd41d;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+
+/* Estilize as opções do dropdown */
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  list-style: none;
+  padding: 0;
+}
+
+/* Exiba as opções quando o botão for clicado */
+.dropdown-container:hover .dropdown-options {
+  display: block;
+}
+
+/* Estilize os itens do dropdown */
+.dropdown-options li {
+  padding: 15px;
+  margin-top:-10px ;
+}
+
+/* Estilize os links */
+.dropdown-options li a {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* Mude a cor do link quando hover */
+.dropdown-options li a:hover {
+  color: #2cca91;
+}
